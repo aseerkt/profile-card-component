@@ -1,0 +1,111 @@
+// Primary
+
+$dark-cyan: hsl(185, 75%, 39%);
+$very-dark-desaturated-blue: hsl(229, 23%, 23%);
+$dark-grayish-blue: hsl(227, 10%, 46%);
+
+// Neutral
+
+$dark-gray: hsl(0, 0%, 59%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 18px;
+  font-family: 'Kumbh Sans', sans-serif;
+  height: 100vh;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  background: $dark-cyan;
+  .bg-bottom {
+    position: absolute;
+    right: -25%;
+    bottom: -100%;
+    z-index: -1;
+  }
+  .bg-top {
+    position: absolute;
+    left: -28%;
+    top: -80%;
+    z-index: -1;
+  }
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 1.5em;
+  .card {
+    width: 100%;
+    margin: auto;
+    height: 350px;
+    border-radius: 0.7em;
+    background: url(../images/bg-pattern-card.svg);
+    overflow: hidden;
+    .profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      margin-top: 130px;
+      height: 100%;
+      background: #fff;
+      small {
+        color: $dark-gray;
+        font-size: 0.7em;
+      }
+      img {
+        border-radius: 50%;
+        border: 5px solid #fff;
+        transform: translateY(-50%);
+      }
+      h3 {
+        font-weight: 800;
+        font-size: 0.9em;
+        color: $very-dark-desaturated-blue;
+        margin-bottom: 0.5em;
+        span {
+          color: $dark-grayish-blue;
+          margin-left: 5px;
+          font-weight: 500;
+        }
+      }
+      .profile-info {
+        width: 100%;
+        margin-top: -2em;
+        .profile-count {
+          margin-top: 0.8em;
+          border-top: 0.1px solid #a9daee;
+          padding: 1em;
+          padding-left: 2em;
+          padding-right: 2em;
+          width: 100%;
+          justify-self: flex-end;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          h3 {
+            font-size: 0.9em;
+            margin-bottom: 0.3em;
+            font-weight: 800;
+          }
+          span {
+            font-size: 0.6em;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 400px) {
+  .card {
+    width: 310px !important;
+  }
+}
